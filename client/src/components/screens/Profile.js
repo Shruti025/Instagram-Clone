@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
+import {Link} from 'react-router-dom'
 import { UserContext } from "../../App";
 import "./Profile.css";
 
@@ -96,6 +97,8 @@ const Profile = () => {
               </h6>
             </div>
             <h6 className="email">{state ? state.email : "loading"}</h6>
+            <h6 className="bio">{state ? state.bio : "loading"}</h6>
+            <button type="submit" className="update-profile"><Link to="/UpdateProfile">Update Profile</Link></button>
           </div>
         </div>
       </div>
